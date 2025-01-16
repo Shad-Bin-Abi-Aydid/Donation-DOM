@@ -1,24 +1,26 @@
 // Donate for Noakhali
 document.getElementById("btnNoak").addEventListener("click", function (event) {
   event.preventDefault();
-  donation("inputNoak", "amountNoak", "mainBalance");
+  donation("inputNoak", "amountNoak", "mainBalance","for Flood at Noakhali, Bangladesh");
 
 });
 
 // For Feni
 document.getElementById("btnFeni").addEventListener("click", function (event) {
   event.preventDefault();
-  donation("inputFeni", "amountFeni", "mainBalance");
+  const value = donation("inputFeni", "amountFeni", "mainBalance","for Flood Relief in Feni,Bangladesh" );
+
 });
 
 // For Quota Movement
 document.getElementById("btnQuota").addEventListener("click", function (event) {
   event.preventDefault();
-  donation("inputQuota", "amountQuota", "mainBalance");
+  const value = donation("inputQuota", "amountQuota", "mainBalance", "for Injured in the Quota Movement");
+
 });
 
 // Shared Function
-function donation(inputValue, amount, mainBalance) {
+function donation(inputValue, amount, mainBalance, place) {
   const inputDonation = getInputFieldValueById(inputValue);
   const currentDonation = getTextFieldValueById(amount);
   const totalBalance = getTextFieldValueById(mainBalance);
@@ -45,9 +47,17 @@ function donation(inputValue, amount, mainBalance) {
     alert('BDT '+inputDonation +' is donated successfully')
     document.getElementById(inputValue).value = '';
 
-    // Add transaction in the history
-    const p = document.createElement('p');
-    p.innerText = `TK. New Balance is`;
-    document.getElementById('').appendChild(p);
+    // calling the history function to add the donation history
+    history(inputDonation, place);
   }
+}
+
+// Add transaction in the history
+function history(value, place){
+  const p = document.createElement('p');
+  p.innerText = `${value} Taka is Donated ${place}
+   Date: ${new Date()}`;
+   p.classList.add('border','border-gray-200','p-5','rounded-lg', 'my-10', 'space-y-10');  
+  document.getElementById('history').appendChild(p);
+
 }
