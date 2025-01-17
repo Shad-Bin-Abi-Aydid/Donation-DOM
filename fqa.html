@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FQA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .lexend-font {
+        font-family: "Lexend", serif;
+      }
+    </style>
+</head>
+<body class="lexend-font">
+    <header class="sticky top-0 z-10">
+        <!-- Navbar Start -->
+        <nav
+          class="flex flex-col lg:flex-row justify-around gap-5 py-6 bg-[#F9F7F3]"
+        >
+          <button class="btn font-bold bg-[#B4F461] px-6 rounded-lg" id="homeBtn">Home</button>
+          <div class="flex justify-center items-center gap-3">
+            <img src="./assets/logo.png" alt="" />
+            <h3 class="text-xl font-bold">Donate Bangladesh</h3>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <img src="./assets/coin.png" alt="" />
+            <p class="text-[#111111B3]" id="mainBalance">5500</p>
+            <p class="text-[#111111B3]">BDT</p>
+          </div>
+        </nav>
+
+        <!-- Navbar End -->
+      </header>
+    <main class="mt-10">
+        <div class="space-y-5 mx-16">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Documents Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and is it useful?</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulation an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+        </div>
+
+    </main>
+
+    <script>
+        const homeBtn = document.getElementById("homeBtn");
+        if (homeBtn) {
+          homeBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = './index.html';
+          });
+        }
+      </script>
+</body>
+</html>

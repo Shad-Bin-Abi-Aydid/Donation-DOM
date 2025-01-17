@@ -19,6 +19,12 @@ document.getElementById("btnQuota").addEventListener("click", function (event) {
 
 });
 
+// Blog Button
+document.getElementById("blogBtn").addEventListener("click", function(event){
+  event.preventDefault();
+  window.location.href = './fqa.html';
+})
+
 // Shared Function
 function donation(inputValue, amount, mainBalance, place) {
   const inputDonation = getInputFieldValueById(inputValue);
@@ -57,7 +63,7 @@ function history(value, place){
   const p = document.createElement('p');
   p.innerText = `${value} Taka is Donated ${place}
    Date: ${new Date()}`;
-   p.classList.add('border','border-gray-200','p-5','rounded-lg', 'my-10', 'space-y-10');  
+   p.classList.add('border','border-gray-200','p-5','rounded-lg', 'my-10', 'space-y-10', 'bg-lime-100');  
   document.getElementById('history').appendChild(p);
 
 }
