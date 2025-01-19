@@ -51,28 +51,40 @@
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Documents Object Model (DOM)?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>DOM is a tree like structure and each element represent as an object of the tree. And it's interact with the document contents. </p>
                 </div>
               </div>
               <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p class="font-bold mb-5">
+    
+                    There are multiple way to select an element from the DOM.
+                    <ul class="list-decimal mx-10 space-y-3">
+                      <li>document.getElementByID('ID')</li>
+                      <li>document.getElementsByClassName('className')</li>
+                      <li>document.getElementsByTagName('tagName')</li>
+                      <li>document.querySelector('selector')</li>
+                      <li>document.querySelectorAll('selector')</li>
+                    </ul>
+                  </p>
                 </div>
               </div>
               <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and is it useful?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>Event Delegation is a technique in the DOM where a event listener is added in the parent element to manage of it's child elements, even through child elements added dynamically 
+                    <br><br>Yes it is useful, when many child need to be handle or when child are added dynamically and optimize the performance and reduce memory space.</p>
                 </div>
               </div>
               <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you manipulation an element's attributes and styles using the DOM?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>There are many way to manipulation an elements attributes. We can add, modify or remove attributes of an element using the DOM for example - setAttribute(attributeName, value), getAttribute(attributeName), removeAttribute(attributeName), hasAttribute(attributeName) 
+                    <br><br>We can manipulate styles using the style property or by adding/removing classes for example - classList.add(), classList.remove(), classList.contains(),</p>
                 </div>
               </div>
         </div>

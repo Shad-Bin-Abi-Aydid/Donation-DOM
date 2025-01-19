@@ -3,7 +3,6 @@ function getInputFieldValueById (id){
 
     const inputValue = document.getElementById(id).value;
     const inputNumber = parseFloat(inputValue);
-    console.log(inputNumber + "-----s");
 
     return inputNumber;
 }
